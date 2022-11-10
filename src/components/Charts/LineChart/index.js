@@ -52,7 +52,7 @@ const generateOptions = (data) => {
     };
   }; 
 
-export default function LineChart({data}) {
+const LineChart = ({data}) => {
   console.log('Line Chart', { data });
   const [options, setOptions] = useState({});
   const [reportType, setReportType] = useState('all');
@@ -90,3 +90,5 @@ export default function LineChart({data}) {
     </div>
   )
 }
+
+export default React.memo(LineChart);
