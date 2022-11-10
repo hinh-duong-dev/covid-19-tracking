@@ -39,7 +39,7 @@ const initOptions = {
     ],
   };
 
-export default function HighMaps({ mapData }) {
+const HighMaps = ({ mapData }) => {
     const [options, setOptions] = useState({});
     const [mapLoaded, setMapLoaded] = useState(false);
     const chartRef = useRef(null);
@@ -92,5 +92,7 @@ export default function HighMaps({ mapData }) {
 
 HighMaps.defaultProps = {
     mapData: {},
-  };
+};
+
+export default React.memo(HighMaps);
   
